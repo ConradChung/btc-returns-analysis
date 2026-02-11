@@ -39,6 +39,7 @@ def get_data(ticker='BTC-USD', period='2y', interval='1d'):
     ticker  : asset symbol  (BTC-USD, ETH-USD, SPY, etc.)
     period  : how far back  ('1y', '2y', '5y', 'max')
     interval: bar size      ('1d', '1wk', '1mo')
+    df: data frame (holds data within columns)
     """
     print(f"Downloading {ticker} data ({period}, {interval} bars)...")
     df = yf.download(ticker, period=period, interval=interval, auto_adjust=True, progress=False)
